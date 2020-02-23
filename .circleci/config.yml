@@ -6,9 +6,11 @@ workflows:
     jobs:
       - react/install
       - react/eslint:
+          type: approval
           requires:
             - react/install
       - react/test:
+          type: approval  
           requires:
             - react/install
       - react/coverage:
