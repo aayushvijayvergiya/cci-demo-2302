@@ -4,8 +4,7 @@ version: 2.1
 workflows:
   push:
     jobs:
-      - react/install:
-          type: approval
+      - react/install
       - react/eslint:
           requires:
             - react/install
